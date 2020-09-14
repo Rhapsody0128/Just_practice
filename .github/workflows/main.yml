@@ -3,7 +3,7 @@ name: 自動build
 on:
   push:
     branches:
-      - bot-master
+      - master
 
 jobs:
   build:
