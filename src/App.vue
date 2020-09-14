@@ -12,7 +12,7 @@ export default {
   mounted () {
     window.fbAsyncInit = function () {
       window.FB.init({
-        appId: '3109557419151059',
+        appId: '2915384785415089',
         cookie: true,
         xfbml: true,
         version: 'v8.0'
