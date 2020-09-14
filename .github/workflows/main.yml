@@ -21,6 +21,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 安裝 Hexo CI
+      - name: 安裝 npm
+        run: |
+          npm install
+          
+      - name: 安裝架構
         run: |
           npm run build
