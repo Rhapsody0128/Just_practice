@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>asd</p>
+    <p>練習</p>
   </div>
 </template>
 
