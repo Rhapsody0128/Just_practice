@@ -3,9 +3,12 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/fb_login">FB login |</router-link>
-      <router-link to="/google_login">GOOGLE login</router-link>
+      <router-link to="/google_login">GOOGLE login |</router-link>
+      <router-link to="/youtube">Youtube</router-link>
     </div>
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 

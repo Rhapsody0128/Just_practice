@@ -18,7 +18,7 @@ const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/people/v1/
 export default {
   data () {
     return {
-      name: 'aa',
+      name: '',
       googlemail: '',
       id: '',
       photoSrc: '',
@@ -27,7 +27,6 @@ export default {
   },
   methods: {
     async googlelogin () {
-      console.log(this.name)
       const auth2 = window.gapi.auth2.getAuthInstance()// 取得GoogleAuth物件
       var name = ''
       var id = ''
@@ -35,6 +34,7 @@ export default {
       var googlemail = ''
       await auth2.signIn().then(function (GoogleUser) {
         console.log('Google登入成功')
+        console.log(GoogleUser)
         name = GoogleUser.tt.Ad
         id = GoogleUser.tt.aU
         googlemail = GoogleUser.tt.bu
@@ -50,7 +50,8 @@ export default {
           personFields: 'names,emailAddresses,photos'
         }).then(function (res) {
           // success
-          // console.log(res.result)
+          console.log(res)
+          console.log(res.result)
         })
       },
       function (error) {
@@ -62,6 +63,7 @@ export default {
       this.photoSrc = photoSrc
       this.googlemail = googlemail
     },
+
     googlelogout () {
       const auth2 = window.gapi.auth2.getAuthInstance() // 取得GoogleAuth物件
       auth2.disconnect().then(function () {
