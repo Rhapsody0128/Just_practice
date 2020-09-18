@@ -12,9 +12,9 @@
 </template>
 
 <script>
-const CLIENT_ID = '620173465-vtba7981i677t33lueo54hbca0pl0qke.apps.googleusercontent.com'
-const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/people/v1/rest']
 
+const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/people/v1/rest']
+const CLIENT_ID = '620173465-vtba7981i677t33lueo54hbca0pl0qke.apps.googleusercontent.com'
 export default {
   data () {
     return {

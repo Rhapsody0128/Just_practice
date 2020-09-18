@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/fb_login">FB login |</router-link>
       <router-link to="/google_login">GOOGLE login |</router-link>
-      <router-link to="/youtube">Youtube</router-link>
+      <router-link to="/youtube">Youtube |</router-link>
+      <router-link to="/gmail">Gmail</router-link>
     </div>
     <keep-alive>
       <router-view/>
