@@ -28,37 +28,37 @@ export default {
       text: '',
       musicCards: ''
     }
+  },
+  methods: {
+    search (text) {
+      const request = window.gapi.client.youtube.search.list({
+        part: 'snippet',
+        q: text,
+        maxResults: 24
+      })
+      var musicCards = []
+      request.execute(function (response) {
+        // 將結果把所需部分進行擷取
+        response.items.map(item => {
+          if (!item.id.playlistId) {
+            var musicCard = {}
+            musicCard._id = item.id.videoId
+            musicCard.title = item.snippet.title
+            musicCard.url = 'https://www.youtube.com/embed/' + musicCard._id
+            musicCard.description = item.snippet.description
+            musicCard.src = 'http://img.youtube.com/vi/' + musicCard._id + '/0.jpg'
+            musicCards.push(musicCard)
+          }
+        })
+      })
+      this.musicCards = musicCards
+    }
+  },
+  mounted () {
+    window.gapi.client.load('youtube', 'v3', function () {
+      window.gapi.client.setApiKey('AIzaSyDK_LlcTzSdQR5cWtpYB4r8vN0yEecDQoY')
+    })
   }
-  // methods: {
-  //   search (text) {
-  //     const request = window.gapi.client.youtube.search.list({
-  //       part: 'snippet',
-  //       q: text,
-  //       maxResults: 24
-  //     })
-  //     var musicCards = []
-  //     request.execute(function (response) {
-  //       // 將結果把所需部分進行擷取
-  //       response.items.map(item => {
-  //         if (!item.id.playlistId) {
-  //           var musicCard = {}
-  //           musicCard._id = item.id.videoId
-  //           musicCard.title = item.snippet.title
-  //           musicCard.url = 'https://www.youtube.com/embed/' + musicCard._id
-  //           musicCard.description = item.snippet.description
-  //           musicCard.src = 'http://img.youtube.com/vi/' + musicCard._id + '/0.jpg'
-  //           musicCards.push(musicCard)
-  //         }
-  //       })
-  //     })
-  //     this.musicCards = musicCards
-  //   }
-  // }
-  // mounted () {
-  //   window.gapi.client.load('youtube', 'v3', function () {
-  //     window.gapi.client.setApiKey('AIzaSyDK_LlcTzSdQR5cWtpYB4r8vN0yEecDQoY')
-  //   })
-  // }
 }
 </script>
 <style lang="stylus">
