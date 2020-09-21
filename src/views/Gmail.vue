@@ -6,7 +6,8 @@
     {{status}}
   </div>
 </template>
-
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
 <script>
 const CLIENT_ID = '620173465-vtba7981i677t33lueo54hbca0pl0qke.apps.googleusercontent.com'
 const API_KEY = 'AIzaSyDK_LlcTzSdQR5cWtpYB4r8vN0yEecDQoY'
