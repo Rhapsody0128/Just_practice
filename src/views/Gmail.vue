@@ -6,6 +6,11 @@
     {{status}}
   </div>
 </template>
+<<<<<<< HEAD
+=======
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
+>>>>>>> master
 <script>
 
 const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest']
