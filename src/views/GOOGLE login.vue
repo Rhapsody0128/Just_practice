@@ -10,8 +10,6 @@
     </div>
   </div>
 </template>
-<script src="https://apis.google.com/js/api.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
 <script>
 
 const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/people/v1/rest']
