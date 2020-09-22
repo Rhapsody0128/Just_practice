@@ -2,6 +2,7 @@
   <div class="Youtube">
     <input type="text" v-model="text">
     <button @click='search(text)'>搜尋</button>
+    <br>
     <table class="table" v-if="musicCards" border="1">
       <tr>
         <td>預覽圖</td>

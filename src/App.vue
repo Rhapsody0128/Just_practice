@@ -31,10 +31,8 @@ export default {
   transition 1s
 }
 #view{
-  display flex
-  justify-content center
-  margin-top 2%
-
+  text-align center
+  margin-top 5%
 }
 .router{
   color rgb(70,50,30)

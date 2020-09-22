@@ -2,6 +2,7 @@
   <div class="GOOGLE_login">
     <button @click="googlelogin()">登入</button>
     <button @click="googlelogout()">登出</button>
+    <br>
     <div class="container">
       <img v-if="photoSrc" :src="photoSrc" alt="">
       <h1 v-if="googlemail">信箱:{{googlemail}}</h1>

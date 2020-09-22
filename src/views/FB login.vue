@@ -2,6 +2,7 @@
   <div class="FB_login">
     <button @click="fblogin()">登入</button>
     <button @click="fblogout()">登出</button>
+    <br>
     <div class="container">
       <img v-if="photoSrc" :src="photoSrc" alt="">
       <h1 v-if="name">姓名:{{name}}</h1>
