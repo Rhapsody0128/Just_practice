@@ -6,10 +6,8 @@
     {{status}}
   </div>
 </template>
-
 <script>
-const CLIENT_ID = '620173465-vtba7981i677t33lueo54hbca0pl0qke.apps.googleusercontent.com'
-const API_KEY = 'AIzaSyDK_LlcTzSdQR5cWtpYB4r8vN0yEecDQoY'
+
 const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest']
 const SCOPES = 'https://www.googleapis.com/auth/gmail.send'
 export default {
@@ -76,16 +74,14 @@ export default {
       })
 
       console.log(sendRequest)
-
-      // sendRequest.execute()
     }
   },
 
   mounted () {
     window.gapi.load('client:auth2', function () {
       window.gapi.client.init({
-        apiKey: API_KEY,
-        clientId: CLIENT_ID,
+        apiKey: process.env.VUE_APP_API_KEY,
+        clientId: process.env.VUE_APP_CLIENT_ID,
         discoveryDocs: DISCOVERY_DOCS,
         scope: SCOPES
       })

@@ -14,7 +14,6 @@
 <script>
 
 const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/people/v1/rest']
-const CLIENT_ID = '620173465-vtba7981i677t33lueo54hbca0pl0qke.apps.googleusercontent.com'
 export default {
   data () {
     return {
@@ -80,7 +79,7 @@ export default {
     window.gapi.load('client', function () {
       window.gapi.client.init({
         // client_id 和 scope 兩者參數必填
-        clientId: CLIENT_ID,
+        clientId: process.env.VUE_APP_CLIENT_ID,
         // scope列表參考：https://developers.google.com/people/api/rest/v1/people/get
         // "profile"是簡寫，要用完整scope名稱也可以
         scope: 'profile', // "https://www.googleapis.com/auth/userinfo.profile",

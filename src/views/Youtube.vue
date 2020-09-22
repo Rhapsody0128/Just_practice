@@ -56,7 +56,7 @@ export default {
   },
   mounted () {
     window.gapi.client.load('youtube', 'v3', function () {
-      window.gapi.client.setApiKey('AIzaSyDK_LlcTzSdQR5cWtpYB4r8vN0yEecDQoY')
+      window.gapi.client.setApiKey(process.env.VUE_APP_API_KEY)
     })
   }
 }

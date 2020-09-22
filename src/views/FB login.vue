@@ -47,6 +47,15 @@ export default {
       fjs.parentNode.insertBefore(js, fjs)
       console.log(js)
     }(document, 'script', 'facebook-jssdk'))
+    window.fbAsyncInit = function () {
+      window.FB.init({
+        appId: process.env.VUE_APP_FB_API,
+        cookie: true,
+        xfbml: true,
+        version: 'v8.0'
+      })
+      window.FB.AppEvents.logPageView()
+    }
   }
 }
 </script>
