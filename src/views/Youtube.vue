@@ -105,7 +105,7 @@ export default {
       td{
         width 100%
         span{
-          font-size 0.001px
+          font-size 0.1rem
         }
       }
     }
