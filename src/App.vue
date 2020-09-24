@@ -26,7 +26,6 @@ export default {
 #nav{
   display flex
   justify-content space-around
-  background white
   align-items center
   transition 1s
 }
@@ -43,6 +42,15 @@ export default {
   color wheat
 }
 #nav:hover{
-  background rgb(0,0,25)
+  background rgb(120,120,120,0.2)
+}
+@media(max-width : 768px){
+  #nav{
+    display flex
+    justify-content space-around
+    align-items center
+    transition 1s
+    flex-direction column
+  }
 }
 </style>

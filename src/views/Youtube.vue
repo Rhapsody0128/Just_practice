@@ -4,19 +4,19 @@
     <button @click='search(text)'>搜尋</button>
     <br>
     <table class="table" v-if="musicCards" border="1">
-      <tr>
+      <th>
         <td>預覽圖</td>
         <td>標題</td>
         <td>ID</td>
         <td>描述</td>
         <td>連結</td>
-      </tr>
+      </th>
       <tr v-for="(musicCard, index) in musicCards" :key="index">
         <td class="pic"><img :src="musicCard.src" alt=""></td>
-        <td>{{musicCard.title}}</td>
-        <td>{{musicCard._id}}</td>
-        <td>{{musicCard.description}}</td>
-        <td><iframe :src="musicCard.url" frameborder="0"></iframe></td>
+        <td><span>{{musicCard.title}}</span></td>
+        <td><span>{{musicCard._id}}</span></td>
+        <td><span>{{musicCard.description}}</span></td>
+        <td><iframe width="100%" height="100%" :src="musicCard.url" frameborder="0"></iframe></td>
       </tr>
     </table>
   </div>
@@ -64,9 +64,30 @@ export default {
 </script>
 <style lang="stylus">
 .table{
+  width 100%
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  th{
+    width 100%
+    display flex
+    justify-content: space-between;
+    padding 0
+    td{
+      width 100%
+      display flex
+      justify-content: center;
+    }
+  }
+  tr{
+    width 100%
+    display flex
+    justify-content: space-between;
+    td{
+      width 100%
+    }
+  }
   .pic{
-    width 15rem
-    height 15rem
     img{
       object-fit cover
       width 100%
@@ -74,5 +95,20 @@ export default {
     }
   }
 }
-
+@media(max-width : 768px){
+  .table{
+    flex-direction column
+    tr{
+      width 100%
+      display flex
+      justify-content: space-between;
+      td{
+        width 100%
+        span{
+          font-size 0.001px
+        }
+      }
+    }
+  }
+}
 </style>
