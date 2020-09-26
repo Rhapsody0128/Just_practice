@@ -95,20 +95,4 @@ export default {
     }
   }
 }
-@media(max-width : 768px){
-  .table{
-    flex-direction column
-    tr{
-      width 100%
-      display flex
-      justify-content: space-between;
-      td{
-        width 100%
-        span{
-          font-size 0.1rem
-        }
-      }
-    }
-  }
-}
 </style>
