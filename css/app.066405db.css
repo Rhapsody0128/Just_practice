@@ -1,0 +1,1 @@
+#nav{display:flex;justify-content:space-around;align-items:center;transition:1s}#view{text-align:center;margin-top:5%}.router{color:#46321e;font-size:2.5rem;transition:.5s}.router:hover{color:wheat}#nav:hover{background:#787878}@media (max-width:768px){#nav{display:flex;justify-content:space-around;align-items:center;transition:1s;flex-direction:column}}

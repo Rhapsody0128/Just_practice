@@ -1,0 +1,1 @@
+.table{flex-wrap:wrap;justify-content:space-around}.table,.table th{width:100%;display:flex}.table th{justify-content:space-between;padding:0}.table th td{justify-content:center}.table th td,.table tr{width:100%;display:flex}.table tr{justify-content:space-between}.table tr td{width:100%}.table .pic img{-o-object-fit:cover;object-fit:cover;width:100%;height:100%}
