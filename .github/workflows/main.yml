@@ -12,6 +12,9 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        VUE_APP_API_KEY: ${{ secrets.VUE_APP_API_KEY }}
+        VUE_APP_CLIENT_ID: ${{ secrets.VUE_APP_CLIENT_ID }}
+        VUE_APP_FB_API: ${{ secrets.VUE_APP_FB_API }}
         BRANCH: gh-pages
         FOLDER: dist
         BUILD_SCRIPT: yarn install && yarn build
